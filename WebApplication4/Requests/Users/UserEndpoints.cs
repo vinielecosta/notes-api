@@ -1,7 +1,5 @@
 using Application.Features.UserRequests;
-using Domain.Entities;
 using MediatR;
-using NotesApp.Application.DTOs;
 
 namespace Presentation.Requests.Users
 {
@@ -15,21 +13,21 @@ namespace Presentation.Requests.Users
             user.MapPost("/users", async (IMediator mediator, CreateUserRequest request) =>
             {
                 var user = await mediator.Send(request);
-                return Results.Created($"/users", UserToDto(user));
+                return Results.Created($"/users", user);
             });
 
             user.MapGet("/users/{userId}", async (IMediator mediator, long userId) =>
             {
                 var request = new GetUserByIdRequest { UserId = userId };
                 var user = await mediator.Send(request);
-                return Results.Ok(UserToDto(user));
+                return Results.Ok(user);
             });
 
             user.MapPatch("/users{userId}", async (IMediator mediator, UpdateUserRequest request, long userId) =>
             {
                 request.UserId = userId;
                 var user = await mediator.Send(request);
-                return Results.Ok(UserToDto(user));
+                return Results.Ok(user);
             });
 
             user.MapDelete("/users/{userId}", async (IMediator mediator, long userId) =>
@@ -41,12 +39,5 @@ namespace Presentation.Requests.Users
 
             return app;
         }
-
-        private static EditUserDto UserToDto(User user) =>
-            new()
-            {
-                Name = user.Name,
-                AboutMe = user.AboutMe
-            };
     }
 }

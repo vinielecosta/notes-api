@@ -1,9 +1,6 @@
 using Application.Features.GroupRequests;
 using Application.Features.UserRequests.GroupRequests;
-using Application.Interfaces;
 using MediatR;
-using NotesApp.Application.DTOs;
-using NotesApp.Domain.Entities;
 
 namespace Presentation.Requests.Groups
 {
@@ -18,14 +15,14 @@ namespace Presentation.Requests.Groups
             {
                 request.UserId = userId;
                 var group = await mediator.Send(request);
-                return Results.Ok(GroupToDto(group));
+                return Results.Ok(group);
             });
 
             group.MapGet("/users/{userId}/groups/{groupId}", async (long userId, long groupId, IMediator mediator) =>
             {
                 var request = new GetGroupByIdRequest { UserId = userId, GroupId = groupId };
                 var group = await mediator.Send(request);
-                return Results.Ok(GroupToDto(group));
+                return Results.Ok(group);
             });
 
             group.MapPatch("/users/{userId}/groups/{groupId}", async (long userId, long groupId, IMediator mediator, UpdateGroupRequest request) =>
@@ -33,7 +30,7 @@ namespace Presentation.Requests.Groups
                 request.UserId = userId;
                 request.GroupId = groupId;
                 var group = await mediator.Send(request);
-                return Results.Ok(GroupToDto(group));
+                return Results.Ok(group);
             });
 
             group.MapDelete("/users/{userId}/groups/{groupId}", async (long userId, long groupId, IMediator mediator) =>
@@ -45,12 +42,5 @@ namespace Presentation.Requests.Groups
 
             return app;
         }
-
-        private static GroupDto GroupToDto(Group group) =>
-            new GroupDto
-            {
-                Description = group.Description,
-                Name = group.Name,
-            };
     }
 }

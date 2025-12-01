@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using NotesApp.Application.Services;
 using NotesApp.Domain.Interfaces;
 using NotesApp.Infrastructure.Data;
 using NotesApp.Infrastructure.Repositories;
@@ -10,10 +9,9 @@ using Presentation.Middlewares;
 using Presentation.Requests.Users;
 using Presentation.Requests.Notes;
 using Presentation.Requests.Groups;
-using Application.Interfaces;
 using NotesApp.Domain.Entities;
-using Application.Services;
 using Domain.Entities;
+using Application.Features.UserRequests;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,19 +37,17 @@ builder.Services.AddDbContext<ApplicationContext>(o =>
 
 // Register Services, Interfaces, Repositories and Validators
 builder.Services
-    .AddScoped<IUserService, UserService>()
     .AddScoped<User.UserBuilder>()
     .AddScoped<IUserRepository, UserRepository>()
-    .AddScoped<INoteService, NoteService>()
+    // .AddScoped<INoteService, NoteService>()
     .AddScoped<Note.NoteBuilder>()
     .AddScoped<INoteRepository, NoteRepository>()
-    .AddScoped<IGroupService, GroupService>()
     .AddScoped<Group.GroupBuilder>()
     .AddScoped<IGroupRepository, GroupRepository>()
     .AddValidatorsFromAssemblyContaining<CreateUserRequestValidator>()
     .AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(
     typeof(Program).Assembly, // Escaneia o projeto Presentation
-    typeof(UserService).Assembly,
+    typeof(CreateUserRequest).Assembly,
     typeof(UserRepository).Assembly// Escaneia o projeto Application
 ));
 

@@ -35,7 +35,7 @@ namespace Presentation.Middlewares
             }
         }
 
-        private ProblemDetails CreateProblemDetails(HttpContext context, Exception ex)
+        private static ProblemDetails CreateProblemDetails(HttpContext context, Exception ex)
         {
             var statusCode = ex switch
             {
