@@ -6,4 +6,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../VEC.NoteManager.Application/VEC.NoteManager.Application.csproj" />
+    <ProjectReference Include="../VEC.NoteManager.Domain/VEC.NoteManager.Domain.csproj" />
+    <ProjectReference Include="../VEC.NoteManager.Infrastructure/VEC.NoteManager.Infrastructure.csproj" />
+  </ItemGroup>
+  
 </Project>
