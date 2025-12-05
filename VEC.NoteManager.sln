@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36121.58
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VEC.NoteManager.API", "src\VEC.NoteManager.API\VEC.NoteManager.API.csproj", "{F44CF69D-E375-496B-866E-0B5A9B0A2E06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VEC.NoteManager.Application", "src\VEC.NoteManager.Application\VEC.NoteManager.Application.csproj", "{16446382-E32F-4F2F-8655-2A16CA1CCE38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VEC.NoteManager.Domain", "src\VEC.NoteManager.Domain\VEC.NoteManager.Domain.csproj", "{3EEA0023-397E-4036-B176-A240DF5403E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VEC.NoteManager.Infrastructure", "src\VEC.NoteManager.Infrastructure\VEC.NoteManager.Infrastructure.csproj", "{75864E5F-ED87-4824-9AAA-06A5413CBB60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VEC.NoteManager.Tests", "tests\VEC.NoteManager.Tests\VEC.NoteManager.Tests.csproj", "{31A25C7D-6EB9-45AF-B863-471ECF3A17D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VEC.NoteManager.IoC", "src\VEC.NoteManager.IoC\VEC.NoteManager.IoC.csproj", "{0F762C4D-E2C2-46F1-880B-BA257FC12FF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Presentation", "01 - Presentation", "{BFA2871B-8506-756C-B0E8-D00D6764DC48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Application", "02 - Application", "{E27750F5-2715-DAE3-270B-B972D32FC444}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Infrastructure", "04 - Infrastructure", "{1B2139F3-A28A-B575-C1F4-89EA9C42AA22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Domain", "03 - Domain", "{79A9C71C-E53D-0775-214F-3FDBCD3D0ED9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - CrossCutting", "05 - CrossCutting", "{0F749540-6B4E-7D67-36A8-D7333541BFBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "98 - Tests", "98 - Tests", "{6CACDC2E-AC48-6583-43CA-C2AD9A5435E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VEC.NotesManager.Shareable", "src\VEC.NotesManager.Shareable\VEC.NotesManager.Shareable.csproj", "{87D7AEB5-623D-461D-98A4-FF86B4A6F66E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F44CF69D-E375-496B-866E-0B5A9B0A2E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F44CF69D-E375-496B-866E-0B5A9B0A2E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F44CF69D-E375-496B-866E-0B5A9B0A2E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F44CF69D-E375-496B-866E-0B5A9B0A2E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16446382-E32F-4F2F-8655-2A16CA1CCE38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16446382-E32F-4F2F-8655-2A16CA1CCE38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16446382-E32F-4F2F-8655-2A16CA1CCE38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16446382-E32F-4F2F-8655-2A16CA1CCE38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EEA0023-397E-4036-B176-A240DF5403E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EEA0023-397E-4036-B176-A240DF5403E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EEA0023-397E-4036-B176-A240DF5403E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EEA0023-397E-4036-B176-A240DF5403E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75864E5F-ED87-4824-9AAA-06A5413CBB60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75864E5F-ED87-4824-9AAA-06A5413CBB60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75864E5F-ED87-4824-9AAA-06A5413CBB60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75864E5F-ED87-4824-9AAA-06A5413CBB60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31A25C7D-6EB9-45AF-B863-471ECF3A17D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31A25C7D-6EB9-45AF-B863-471ECF3A17D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31A25C7D-6EB9-45AF-B863-471ECF3A17D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31A25C7D-6EB9-45AF-B863-471ECF3A17D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F762C4D-E2C2-46F1-880B-BA257FC12FF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F762C4D-E2C2-46F1-880B-BA257FC12FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F762C4D-E2C2-46F1-880B-BA257FC12FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F762C4D-E2C2-46F1-880B-BA257FC12FF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87D7AEB5-623D-461D-98A4-FF86B4A6F66E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D7AEB5-623D-461D-98A4-FF86B4A6F66E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D7AEB5-623D-461D-98A4-FF86B4A6F66E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D7AEB5-623D-461D-98A4-FF86B4A6F66E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F44CF69D-E375-496B-866E-0B5A9B0A2E06} = {BFA2871B-8506-756C-B0E8-D00D6764DC48}
+		{16446382-E32F-4F2F-8655-2A16CA1CCE38} = {E27750F5-2715-DAE3-270B-B972D32FC444}
+		{3EEA0023-397E-4036-B176-A240DF5403E9} = {79A9C71C-E53D-0775-214F-3FDBCD3D0ED9}
+		{75864E5F-ED87-4824-9AAA-06A5413CBB60} = {1B2139F3-A28A-B575-C1F4-89EA9C42AA22}
+		{0F762C4D-E2C2-46F1-880B-BA257FC12FF4} = {0F749540-6B4E-7D67-36A8-D7333541BFBB}
+		{87D7AEB5-623D-461D-98A4-FF86B4A6F66E} = {0F749540-6B4E-7D67-36A8-D7333541BFBB}
+		{31A25C7D-6EB9-45AF-B863-471ECF3A17D7} = {6CACDC2E-AC48-6583-43CA-C2AD9A5435E5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E837AAAE-CC6F-408E-BA13-F738D719B305}
+	EndGlobalSection
+EndGlobal

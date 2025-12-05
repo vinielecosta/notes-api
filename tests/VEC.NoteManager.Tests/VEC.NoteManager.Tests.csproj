@@ -27,9 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Application\Application.csproj" />
-    <ProjectReference Include="..\Domain\Domain.csproj" />
-    <ProjectReference Include="..\WebApplication4\Presentation.csproj" />
+    <ProjectReference Include="../../src/VEC.NoteManager.API/VEC.NoteManager.API.csproj" />
+    <ProjectReference Include="../../src/VEC.NoteManager.Application/VEC.NoteManager.Application.csproj" />
+    <ProjectReference Include="../../src/VEC.NoteManager.Domain/VEC.NoteManager.Domain.csproj" />
   </ItemGroup>
 
 </Project>

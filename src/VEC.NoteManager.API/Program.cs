@@ -7,7 +7,7 @@ using FluentValidation;
 using NotesApp.Application.Validators;
 using Presentation.Middlewares;
 using Presentation.Requests.Users;
-using Presentation.Requests.Notes;
+// using Presentation.Requests.Notes;   
 using Presentation.Requests.Groups;
 using NotesApp.Domain.Entities;
 using Domain.Entities;
@@ -27,12 +27,8 @@ builder.Services.AddEndpointsApiExplorer()
     });
 });
 
-DotNetEnv.Env.Load();
-
-// Register database context
-
 builder.Services.AddDbContext<ApplicationContext>(o =>
-    o.UseNpgsql(DotNetEnv.Env.GetString("CONNECTION_STRING_DB", "Server=127.0.0.1;Port=5432;Database=NotesApp;User id=postgres;Password=root"),
+    o.UseNpgsql(builder.Configuration.GetValue<string>("DatabaseInformation:CONNECTION_STRING_DB"),
         o => o.MigrationsAssembly("Presentation")));
 
 // Register Services, Interfaces, Repositories and Validators
@@ -57,7 +53,7 @@ var app = builder.Build();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.MapUserEndpoints()
-    .MapNoteEndpoints()
+    // .MapNoteEndpoints()
     .MapGroupEndpoints();
 
 

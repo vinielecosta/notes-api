@@ -18,8 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj" />
-    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+    <ProjectReference Include="../VEC.NoteManager.Domain/VEC.NoteManager.Domain.csproj" />
   </ItemGroup>
 
 </Project>
